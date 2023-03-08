@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</title>
+</head>
+<body>
+    Twoje dane:<br>
+    <hr>
+    imię:<br><input id="name" type="text">*<br><br>
+    nazwisko:<br><input id="surname" type="text">*<br><br>
+    e-mail:<br><input id="email" type="text">*<br><br>
+    data:<br><input id="date" type="date">*<br><br>
+    <button onclick="a()">Wyślij</button>
+    <hr>
+    Uwaga!<br>
+    Pola oznaczone * są obowiązkowe!
+
+    <script>
+        function a(){
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var email = document.getElementById("email").value;
+            var date = document.getElementById("date").value;
+            if(name == "") {
+                alert("Wpisz imię");
+            } else if(surname == "") {
+                alert("Wpisz nazwisko");
+            } else if(email == "") {
+                alert("Wpisz e-mail");
+            } else if(date == "") {
+                alert("Wpisz datę");
+            } else {
+                alert("Przesłano");
+                document.getElementById("name").value = "";
+                document.getElementById("surname").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("date").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
